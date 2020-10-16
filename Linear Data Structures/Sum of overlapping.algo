@@ -1,0 +1,28 @@
+ALGORITHM the sum of overlapping Elements
+VAR
+     htab : HASH_TABLE<INTEGER,STRING>;
+     inters:array of INTEGER[20];
+      n,i, lastNum: INTEGER;
+      isIntersect : BOOLEAN 
+      count:array of INTEGER[100];
+BEGIN
+    lastNum:= -1;
+    FOR i FROM 0 TO n-1 DO
+        IF (lastNum < intrs[i][1]) THEN 
+            lastNum :=  intrs[i][1];
+        END_IF
+    END_FOR
+     count.length := lastTime +1;
+
+    FOR i FROM 0 TO n-1 DO
+        count[intrs[i][0]] := count[intrs[i][0]] + 1; 
+        count[intrs[i][1]] := count[intrs[i][1]] - 1; 
+    END_FOR
+       FOR i FROM 0 TO count.length -1 DO
+        sum := sum + count[i];
+        IF (sum > 1) THEN
+            isIntersect := TRUE;
+            BREAK;
+        END_IF
+    END_FOR
+END

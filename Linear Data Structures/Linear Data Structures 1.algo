@@ -1,0 +1,41 @@
+ALGORITHM solution1
+VAR
+ i,j:INTEGER
+ tab:Array_OF INTEGER[i]
+ Htab:HASH_TABLE<INTEGER,STRING>;
+ set1,set2:array of INTEGER[20];
+ a1,a2:BOOLEAN;
+ 
+BEGIN
+ htab : HASH_TABLE<INTEGER,STRING>;
+       FOR i FROM 0 TO set1.length-1 STEP 1  DO 
+            a1:=false;
+       FOR j FROM 0 TO set2.length-1 step2 DO
+        IF (set1[i]=set2[j]) THEN
+            a2:=true;
+            break;
+        END
+        END_for
+        IF (not a2) THEN
+            sum:=sum+set1[i];
+        END_IF
+
+          END_for 
+
+        for  i from 0 to set2.length-1 STEP 1 DO
+               a1:=false;
+       FOR j FROM 0 TO set1.length-1 step2 DO
+        IF (set2[i]=set1[j]) THEN
+            a2:=true;
+            break;
+        END
+        END_for
+        IF (not a2) THEN
+            sum:=sum+set2[i];
+        END_IF
+
+          END_for 
+ write (sum)
+       
+END
+
